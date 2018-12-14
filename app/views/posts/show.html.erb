@@ -1,33 +1,28 @@
-  <div id="post_show_content" class="skinny_wrapper wrapper_padding">
-    <header>
-      <p class="date"><%= @post.created_at.strftime('%A, %B %d') %></p>
-      <h1><%= @post.title %></h1>
-
-      <hr>
-    </header>
-
-    <div id="content">
-      <%= @post.content %>
-    </div>
+<div id="post_show_content" class="skinny_wrapper wrapper_padding">
+  <header>
+    <p class="date"><%= @post.created_at.strftime('%A, %B %d') %></p>
+    <h1><%= @post.title %></h1>
 
     <hr>
+  </header>
 
-    <div id="share_box">
-      <p>Share The Do List</p>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-google-plus"></i></a>
-
-    </div>
-
-    <hr>
-    
+  <div id="content">
+    <%= @post.content %>
   </div>
 
-<br>
-<br>
+  <hr>
 
-<%= link_to "Edit", edit_post_path(@post) %>
+  <div id="share_box">
+    <p>Share The Do List</p>
+    <br>
+    <%= social_share_button_tag(@post.title) %>
+<!--       <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-google-plus"></i></a> -->
 
-<%= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "Are you sure you want to delete this?"} %>
+  </div>
+
+  <hr>
+  
+</div>
 
