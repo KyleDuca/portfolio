@@ -53,3 +53,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'social-share-button'
+
+gem 'pygments.rb', '~> 0.6.3'
+
+gem 'redcarpet', '~> 3.4'
