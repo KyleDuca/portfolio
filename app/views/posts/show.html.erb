@@ -7,7 +7,7 @@
   </header>
 
   <div id="content">
-    <%= simple_format @post.content %>
+    <%= markdown @post.content %>
   </div>
 
   <hr>
@@ -28,6 +28,3 @@
 
 <%= link_to "Edit", edit_post_path(@post) %>
 
-'''ruby
-puts 'Hello World!'
-'''
